@@ -18,7 +18,7 @@
 
    Se agregan las bases del laboratorio 5:
 
-   
+   ![img.png](img.png)
 
 2. Incluya dentro de las dependencias de Maven los 'webjars' de jQuery y Bootstrap (esto permite tener localmente dichas librerías de JavaScript al momento de construír el proyecto):
 
@@ -42,6 +42,9 @@
 
     ```
 
+Se han agregado las dependencias de webjars en el archivo pom.xml y se cambiaron las versiones de las dependencias de bootstrap y jquery.
+
+
 ## Front-End - Vistas
 
 1. Cree el directorio donde residirá la aplicación JavaScript. Como se está usando SpringBoot, la ruta para poner en el mismo contenido estático (páginas Web estáticas, aplicaciones HTML5/JS, etc) es:  
@@ -50,9 +53,13 @@
     src/main/resources/static
     ```
 
-4. Cree, en el directorio anterior, la página index.html, sólo con lo básico: título, campo para la captura del autor, botón de 'Get blueprints', campo <div> donde se mostrará el nombre del autor seleccionado, [la tabla HTML](https://www.w3schools.com/html/html_tables.asp) donde se mostrará el listado de planos (con sólo los encabezados), y un campo <div> donde se mostrará el total de puntos de los planos del autor. Recuerde asociarle identificadores a dichos componentes para facilitar su búsqueda mediante selectores.
+   ![img_1.png](img_1.png)
 
-5. En el elemento \<head\> de la página, agregue las referencia a las librerías de jQuery, Bootstrap y a la hoja de estilos de Bootstrap. 
+2. Cree, en el directorio anterior, la página index.html, sólo con lo básico: título, campo para la captura del autor, botón de 'Get blueprints', campo <div> donde se mostrará el nombre del autor seleccionado, [la tabla HTML](https://www.w3schools.com/html/html_tables.asp) donde se mostrará el listado de planos (con sólo los encabezados), y un campo <div> donde se mostrará el total de puntos de los planos del autor. Recuerde asociarle identificadores a dichos componentes para facilitar su búsqueda mediante selectores.
+
+   ![img_2.png](img_2.png)
+
+3. En el elemento \<head\> de la página, agregue las referencia a las librerías de jQuery, Bootstrap y a la hoja de estilos de Bootstrap. 
     ```html
     <head>
         <title>Blueprints</title>
@@ -65,14 +72,16 @@
           href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
     </head>
     ```
+   ![img_3.png](img_3.png)
 
-
-5. Suba la aplicación (mvn spring-boot:run), y rectifique:
+4. Suba la aplicación (mvn spring-boot:run), y rectifique:
     1. Que la página sea accesible desde:
     ```
     http://localhost:8080/index.html
     ```
     2. Al abrir la consola de desarrollador del navegador, NO deben aparecer mensajes de error 404 (es decir, que las librerías de JavaScript se cargaron correctamente).
+
+      ![img_4.png](img_4.png)
 
 ## Front-End - Lógica
 
