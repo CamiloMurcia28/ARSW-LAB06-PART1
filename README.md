@@ -15,6 +15,11 @@
 ## Ajustes Backend
 
 1. Trabaje sobre la base del proyecto anterior (en el que se hizo el API REST).
+
+   Se agregan las bases del laboratorio 5:
+
+   
+
 2. Incluya dentro de las dependencias de Maven los 'webjars' de jQuery y Bootstrap (esto permite tener localmente dichas librerías de JavaScript al momento de construír el proyecto):
 
     ```xml
