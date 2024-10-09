@@ -6,6 +6,8 @@
     <title>Blueprints</title>
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+    <script src="js/apimock.js"></script>
+    <script src="js/app.js"></script>
     <link rel="stylesheet" href="/webjars/bootstrap/5.3.2/css/bootstrap.min.css" />
 </head>
 <body>
@@ -16,7 +18,7 @@
             <h2 class="mb-3">Author</h2>
             <div class="input-group mb-3">
                 <input type="text" class="form-control" id="search-author" />
-                <button class="btn btn-info" id="get-blueprints" onclick="">Get Blueprints</button>
+                <button class="btn btn-info" id="get-blueprints" onclick="app.getBlueprints()">Get Blueprints</button>
             </div>
             <div class="card mb-3">
                 <div class="card-header">
