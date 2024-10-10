@@ -26,12 +26,11 @@ apimock = (function () {
         },
 
         getBlueprintsByNameAndAuthor: function (authname, bpname, callback) {
-
             callback(
                     mockdata[authname].find(function (e) {
-                return e.name === bpname
-            })
-                    );
+                        return e.name === bpname
+                    })
+            );
         }
     }
 
