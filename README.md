@@ -92,7 +92,7 @@ Se han agregado las dependencias de webjars en el archivo pom.xml y se cambiaron
 
 2. Copie el módulo provisto (apimock.js) en la misma ruta del módulo antes creado. En éste agréguele más planos (con más puntos) a los autores 'quemados' en el código.
 
-
+![image](https://github.com/user-attachments/assets/efaae3dd-e770-4f7e-8660-fde9952dcd45)
 
 3. Agregue la importación de los dos nuevos módulos a la página HTML (después de las importaciones de las librerías de jQuery y Bootstrap):
     ```html
@@ -100,22 +100,33 @@ Se han agregado las dependencias de webjars en el archivo pom.xml y se cambiaron
     <script src="js/app.js"></script>
     ```
 
-3. Haga que el módulo antes creado mantenga de forma privada:
+![image](https://github.com/user-attachments/assets/670f3603-e849-441a-a0f2-efd746180532)
+
+4. Haga que el módulo antes creado mantenga de forma privada:
     * El nombre del autor seleccionado.
     * El listado de nombre y tamaño de los planos del autor seleccionado. Es decir, una lista objetos, donde cada objeto tendrá dos propiedades: nombre de plano, y número de puntos del plano.
 
     Junto con una operación pública que permita cambiar el nombre del autor actualmente seleccionado.
+    
+   ![image](https://github.com/user-attachments/assets/788dc862-77e5-43a0-83fd-06ea25be5847)
+   ![image](https://github.com/user-attachments/assets/f87d5145-cd8d-4b3c-86a5-b80615ba8bbe)
 
-
-4. Agregue al módulo 'app.js' una operación pública que permita actualizar el listado de los planos, a partir del nombre de su autor (dado como parámetro). Para hacer esto, dicha operación debe invocar la operación 'getBlueprintsByAuthor' del módulo 'apimock' provisto, enviándole como _callback_ una función que:
+5. Agregue al módulo 'app.js' una operación pública que permita actualizar el listado de los planos, a partir del nombre de su autor (dado como parámetro). Para hacer esto, dicha operación debe invocar la operación 'getBlueprintsByAuthor' del módulo 'apimock' provisto, enviándole como _callback_ una función que:
 
     * Tome el listado de los planos, y le aplique una función 'map' que convierta sus elementos a objetos con sólo el nombre y el número de puntos.
 
+![image](https://github.com/user-attachments/assets/292b6664-2839-44f6-a157-4f2c08e36835)
+
     * Sobre el listado resultante, haga otro 'map', que tome cada uno de estos elementos, y a través de jQuery agregue un elemento \<tr\> (con los respectvos \<td\>) a la tabla creada en el punto 4. Tenga en cuenta los [selectores de jQuery](https://www.w3schools.com/JQuery/jquery_ref_selectors.asp) y [los tutoriales disponibles en línea](https://www.tutorialrepublic.com/codelab.php?topic=faq&file=jquery-append-and-remove-table-row-dynamically). Por ahora no agregue botones a las filas generadas.
+
+   ![image](https://github.com/user-attachments/assets/3f5e4e4c-638b-475a-83ba-8e8a639a2055)
 
     * Sobre cualquiera de los dos listados (el original, o el transformado mediante 'map'), aplique un 'reduce' que calcule el número de puntos. Con este valor, use jQuery para actualizar el campo correspondiente dentro del DOM.
 
-5. Asocie la operación antes creada (la de app.js) al evento 'on-click' del botón de consulta de la página.
+   ![image](https://github.com/user-attachments/assets/013159b5-b726-4c54-8ffe-3c0626a6dcf6)
+
+
+6. Asocie la operación antes creada (la de app.js) al evento 'on-click' del botón de consulta de la página.
 
 ![image](https://github.com/user-attachments/assets/bfa3c26e-0fa3-45f5-9abc-b1fea48cab59)
 
