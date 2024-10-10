@@ -1,12 +1,12 @@
 var useMockData = false;
-var api = apimock;
+var api = apiclient;
 
 var app = (function(){
     var author_ = "";
     var blueprints_ = [];
 
     var _displayError = function(message) {
-        console.error(message);
+        console.log("Error",message);
         $("#error-message").text(message).show();
         setTimeout(() => $("#error-message").hide(), 3000);
     };
@@ -35,6 +35,7 @@ var app = (function(){
                 return;
             }
             api.getBlueprintsByNameAndAuthor(author, name, function(blueprint) {
+                console.log("Blueprint data received:", blueprint);
                 if (!blueprint || !blueprint.points || !Array.isArray(blueprint.points)) {
                     _displayError("Invalid blueprint data received");
                     return;
