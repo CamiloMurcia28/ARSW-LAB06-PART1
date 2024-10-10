@@ -149,4 +149,8 @@ Se han agregado las dependencias de webjars en el archivo pom.xml y se cambiaron
 
 13. Modifique el código de app.js de manera que sea posible cambiar entre el 'apimock' y el 'apiclient' con sólo una línea de código.
 
+Unicamente cambiando el nombre del api podremos elegir cual usar
+![image](https://github.com/user-attachments/assets/c9d73265-23de-4b14-bb00-b270b3d077c8)
+
+
 14. Revise la [documentación y ejemplos de los estilos de Bootstrap](https://v4-alpha.getbootstrap.com/examples/) (ya incluidos en el ejercicio), agregue los elementos necesarios a la página para que sea más vistosa, y más cercana al mock dado al inicio del enunciado.
