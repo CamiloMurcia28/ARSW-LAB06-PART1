@@ -117,7 +117,11 @@ Se han agregado las dependencias de webjars en el archivo pom.xml y se cambiaron
 
 5. Asocie la operación antes creada (la de app.js) al evento 'on-click' del botón de consulta de la página.
 
+![image](https://github.com/user-attachments/assets/bfa3c26e-0fa3-45f5-9abc-b1fea48cab59)
+
 6. Verifique el funcionamiento de la aplicación. Inicie el servidor, abra la aplicación HTML5/JavaScript, y rectifique que al ingresar un usuario existente, se cargue el listado del mismo.
+
+![image](https://github.com/user-attachments/assets/6a6f435b-9099-4b2b-a572-ecc3df4c1ddd)
 
 ## Para la próxima semana
 
