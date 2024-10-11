@@ -130,13 +130,15 @@ Se han agregado las dependencias de webjars en el archivo pom.xml y se cambiaron
 
 ![image](https://github.com/user-attachments/assets/bfa3c26e-0fa3-45f5-9abc-b1fea48cab59)
 
-6. Verifique el funcionamiento de la aplicación. Inicie el servidor, abra la aplicación HTML5/JavaScript, y rectifique que al ingresar un usuario existente, se cargue el listado del mismo.
+7. Verifique el funcionamiento de la aplicación. Inicie el servidor, abra la aplicación HTML5/JavaScript, y rectifique que al ingresar un usuario existente, se cargue el listado del mismo.
 
-![image](https://github.com/user-attachments/assets/6a6f435b-9099-4b2b-a572-ecc3df4c1ddd)
+![image](https://github.com/user-attachments/assets/c75eaa18-6ca3-462b-8360-0d89cd7165d1)
 
 ## Para la próxima semana
 
 8. A la página, agregue un [elemento de tipo Canvas](https://www.w3schools.com/html/html5_canvas.asp), con su respectivo identificador. Haga que sus dimensiones no sean demasiado grandes para dejar espacio para los otros componentes, pero lo suficiente para poder 'dibujar' los planos.
+
+![image](https://github.com/user-attachments/assets/6bf02d16-d4a0-4713-b5f0-cf79c261590d)
 
 9. Al módulo app.js agregue una operación que, dado el nombre de un autor, y el nombre de uno de sus planos dados como parámetros, haciendo uso del método getBlueprintsByNameAndAuthor de apimock.js y de una función _callback_:
     * Consulte los puntos del plano correspondiente, y con los mismos dibuje consectivamente segmentos de recta, haciendo uso [de los elementos HTML5 (Canvas, 2DContext, etc) disponibles](https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_canvas_tut_path)* Actualice con jQuery el campo <div> donde se muestra el nombre del plano que se está dibujando (si dicho campo no existe, agruéguelo al DOM).
