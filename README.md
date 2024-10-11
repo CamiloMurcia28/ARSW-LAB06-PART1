@@ -143,16 +143,34 @@ Se han agregado las dependencias de webjars en el archivo pom.xml y se cambiaron
 9. Al módulo app.js agregue una operación que, dado el nombre de un autor, y el nombre de uno de sus planos dados como parámetros, haciendo uso del método getBlueprintsByNameAndAuthor de apimock.js y de una función _callback_:
     * Consulte los puntos del plano correspondiente, y con los mismos dibuje consectivamente segmentos de recta, haciendo uso [de los elementos HTML5 (Canvas, 2DContext, etc) disponibles](https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_canvas_tut_path)* Actualice con jQuery el campo <div> donde se muestra el nombre del plano que se está dibujando (si dicho campo no existe, agruéguelo al DOM).
 
+    ```
+    getBlueprintsByName: function(name){
+         api.getBlueprintsByNameAndAuthor(author, name, function(blueprint) {
+            ...
+          }
+          ...
+    }
+    ```
+
 10. Verifique que la aplicación ahora, además de mostrar el listado de los planos de un autor, permita seleccionar uno de éstos y graficarlo. Para esto, haga que en las filas generadas para el punto 5 incluyan en la última columna un botón con su evento de clic asociado a la operación hecha anteriormente (enviándo como parámetro los nombres correspondientes).
+
+   ![image](https://github.com/user-attachments/assets/6a04e515-7706-416c-b8a6-79014ab2f7ec)
 
 11. Verifique que la aplicación ahora permita: consultar los planos de un auto y graficar aquel que se seleccione.
 
+   ![image](https://github.com/user-attachments/assets/aa855a2a-9a2e-4290-b861-395ab48fb982)
+
 12. Una vez funcione la aplicación (sólo front-end), haga un módulo (llámelo 'apiclient') que tenga las mismas operaciones del 'apimock', pero que para las mismas use datos reales consultados del API REST. Para lo anterior revise [cómo hacer peticiones GET con jQuery](https://api.jquery.com/jquery.get/), y cómo se maneja el esquema de _callbacks_ en este contexto.
+
+   ```
+   var apiclient = (function () {
+       ...
+   })();
+   ```
 
 13. Modifique el código de app.js de manera que sea posible cambiar entre el 'apimock' y el 'apiclient' con sólo una línea de código.
 
-Unicamente cambiando el nombre del api podremos elegir cual usar
-![image](https://github.com/user-attachments/assets/c9d73265-23de-4b14-bb00-b270b3d077c8)
+![image](https://github.com/user-attachments/assets/ea74a079-56de-4202-8f8e-b7ad042b4066)
 
 
 14. Revise la [documentación y ejemplos de los estilos de Bootstrap](https://v4-alpha.getbootstrap.com/examples/) (ya incluidos en el ejercicio), agregue los elementos necesarios a la página para que sea más vistosa, y más cercana al mock dado al inicio del enunciado.
