@@ -174,3 +174,6 @@ Se han agregado las dependencias de webjars en el archivo pom.xml y se cambiaron
 
 
 14. Revise la [documentación y ejemplos de los estilos de Bootstrap](https://v4-alpha.getbootstrap.com/examples/) (ya incluidos en el ejercicio), agregue los elementos necesarios a la página para que sea más vistosa, y más cercana al mock dado al inicio del enunciado.
+
+    ![image](https://github.com/user-attachments/assets/7535a366-5bbf-4b5d-8c3c-8d7b11ac1f5b)
+
