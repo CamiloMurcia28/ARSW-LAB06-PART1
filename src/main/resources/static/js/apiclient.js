@@ -33,9 +33,7 @@ var apiclient = (function () {
             console.error("Error fetching data: ", textStatus, errorThrown);
         });
     };
-    
-    
-    
+
     return {
         getBlueprintsByAuthor: getBlueprintsByAuthor,
         getBlueprintsByNameAndAuthor: getBlueprintsByNameAndAuthor

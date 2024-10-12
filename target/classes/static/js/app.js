@@ -1,5 +1,11 @@
 var useMockData = false;
-var api = apiclient;
+var api;
+
+if (useMockData) {
+    api = apimock;
+} else {
+    api = apiclient;
+}
 
 var app = (function(){
     var author_ = "";
@@ -85,8 +91,7 @@ var app = (function(){
                             throw new Error("Invalid blueprint format");
                         }
                         return {
-                            name: blueprint.name,
-                            npoints: blueprint.points.length
+                            name: blueprint.name, npoints: blueprint.points.length
                         };
                     });
                     var $authorName = $("#author-name");
@@ -99,13 +104,10 @@ var app = (function(){
                         $row.append($("<td>").text(blueprint.name));
                         $row.append($("<td>").text(blueprint.npoints));
 
-                        var $button = $("<button>")
-                            .text("Open")
-                            .addClass("btn btn-info px-3")
+                        var $button = $("<button>").text("Open").addClass("btn btn-info px-3")
                             .on("click", function() {
                                 app.getBluePrintByName(blueprint.name);
                             });
-
                         $row.append($("<td>").append($button));
                         $tbody.append($row);
                     });
