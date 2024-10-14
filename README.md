@@ -1,4 +1,7 @@
 ### Escuela Colombiana de Ingeniería
+
+## Autores: Camilo Nicolas Murcia Espinosa y Tomas Suarez Piratova
+
 ### Arquiecturas de Software
 
 ## Construción de un cliente 'grueso' con un API REST, HTML5, Javascript y CSS3. Parte I.
